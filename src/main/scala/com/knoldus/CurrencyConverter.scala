@@ -19,7 +19,7 @@ trait CurrencyConverter {
       throw new Exception("Amount cannot be negative!")
     }
     else {
-      inputCurrencyType match {
+      inputCurrencyType.toUpperCase match {
         case "INR" => convertFromINR(inputCurrency, outputCurrencyType)
 
         case "USD" => convertFromUSD(inputCurrency, outputCurrencyType)
@@ -36,7 +36,7 @@ trait CurrencyConverter {
   }
 
   private def currencyConversionPrivate(inputCurrencyType: String, inputCurrency: Double, outputCurrencyType: String): Double = {
-    inputCurrencyType match {
+    inputCurrencyType.toUpperCase match {
       case "CHF" => convertFromCHF(inputCurrency, outputCurrencyType)
 
       case "CAD" => convertFromCAD(inputCurrency, outputCurrencyType)
@@ -59,7 +59,7 @@ trait CurrencyConverter {
    */
 
   def convertFromINR(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "USD" => inputCurrency * 0.014
       case "EUR" => inputCurrency * 0.013
       case "JPY" => inputCurrency * 1.53
@@ -70,7 +70,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromINRPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "CAD" => inputCurrency * 0.019
       case "ZAR" => inputCurrency * 0.21
       case "AUD" => inputCurrency * 0.021
@@ -87,7 +87,7 @@ trait CurrencyConverter {
    */
 
   def convertFromUSD(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "INR" => inputCurrency * 71.52
       case "EUR" => inputCurrency * 0.91
       case "JPY" => inputCurrency * 109.73
@@ -98,7 +98,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromUSDPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "CAD" => inputCurrency * 1.33
       case "ZAR" => inputCurrency * 15.08
       case "AUD" => inputCurrency * 1.50
@@ -115,7 +115,7 @@ trait CurrencyConverter {
    */
 
   def convertFromEUR(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "USD" => inputCurrency * 1.09
       case "INR" => inputCurrency * 78.28
       case "JPY" => inputCurrency * 120.11
@@ -126,7 +126,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromEURPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "CAD" => inputCurrency * 1.46
       case "ZAR" => inputCurrency * 16.50
       case "AUD" => inputCurrency * 1.64
@@ -143,7 +143,7 @@ trait CurrencyConverter {
    */
 
   def convertFromJPY(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "USD" => inputCurrency * 0.0091
       case "EUR" => inputCurrency * 0.0083
       case "INR" => inputCurrency * 0.65
@@ -154,7 +154,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromJPYPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "CAD" => inputCurrency * 0.012
       case "ZAR" => inputCurrency * 0.14
       case "AUD" => inputCurrency * 0.014
@@ -171,7 +171,7 @@ trait CurrencyConverter {
    */
 
   def convertFromGBP(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "USD" => inputCurrency * 1.29
       case "EUR" => inputCurrency * 1.18
       case "JPY" => inputCurrency * 141.47
@@ -182,7 +182,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromGBPPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "CAD" => inputCurrency * 1.72
       case "ZAR" => inputCurrency * 19.44
       case "AUD" => inputCurrency * 1.93
@@ -199,7 +199,7 @@ trait CurrencyConverter {
    */
 
   def convertFromCHF(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "USD" => inputCurrency * 1.02
       case "EUR" => inputCurrency * 0.93
       case "JPY" => inputCurrency * 112.23
@@ -210,7 +210,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromCHFPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "CAD" => inputCurrency * 1.36
       case "ZAR" => inputCurrency * 15.41
       case "AUD" => inputCurrency * 1.53
@@ -227,7 +227,7 @@ trait CurrencyConverter {
    */
 
   def convertFromCAD(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "USD" => inputCurrency * 0.75
       case "EUR" => inputCurrency * 0.69
       case "JPY" => inputCurrency * 82.44
@@ -238,7 +238,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromCADPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "INR" => inputCurrency * 53.73
       case "ZAR" => inputCurrency * 11.33
       case "AUD" => inputCurrency * 1.13
@@ -255,7 +255,7 @@ trait CurrencyConverter {
    */
 
   def convertFromZAR(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "USD" => inputCurrency * 0.066
       case "EUR" => inputCurrency * 0.061
       case "JPY" => inputCurrency * 7.28
@@ -266,7 +266,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromZARPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "CAD" => inputCurrency * 0.088
       case "INR" => inputCurrency * 4.74
       case "AUD" => inputCurrency * 0.099
@@ -283,7 +283,7 @@ trait CurrencyConverter {
    */
 
   def convertFromAUD(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "USD" => inputCurrency * 0.067
       case "EUR" => inputCurrency * 0.61
       case "JPY" => inputCurrency * 73.24
@@ -294,7 +294,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromAUDPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "CAD" => inputCurrency * 0.89
       case "ZAR" => inputCurrency * 10.06
       case "INR" => inputCurrency * 47.72
@@ -311,7 +311,7 @@ trait CurrencyConverter {
    */
 
   def convertFromKWD(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "USD" => inputCurrency * 3.29
       case "EUR" => inputCurrency * 3.00
       case "JPY" => inputCurrency * 360.71
@@ -322,7 +322,7 @@ trait CurrencyConverter {
   }
 
   private def convertFromKWDPrivate(inputCurrency: Double, outputCurrencyType: String): Double = {
-    outputCurrencyType match {
+    outputCurrencyType.toUpperCase match {
       case "CAD" => inputCurrency * 4.37
       case "ZAR" => inputCurrency * 49.56
       case "AUD" => inputCurrency * 4.93
