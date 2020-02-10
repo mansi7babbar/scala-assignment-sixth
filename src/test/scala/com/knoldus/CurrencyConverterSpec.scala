@@ -16,7 +16,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
   }
 
   "Currency conversion method" should "should convert Indian Rupee (INR) to U.S. Dollar (USD)" in {
-    val actualResult = currencyConverter.currencyConversion("INR", 50, "USD")
+    val actualResult = currencyConverter.currencyConversion("inr", 50, "usd")
     val expectedResult = 0.7000000000000001
     assert(expectedResult == actualResult)
   }
