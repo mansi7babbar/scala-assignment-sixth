@@ -557,7 +557,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.currencyConversion("DZD", 500, "KWD")
+      currencyConverter.currencyConversion("ABC", 50, "KWD")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -566,7 +566,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion method" should "throw Exception when negative amount given" in {
     try {
-      currencyConverter.currencyConversion("DZD", -100, "KWD")
+      currencyConverter.currencyConversion("DZD", -100, "INR")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Amount cannot be negative!")
@@ -575,7 +575,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from INR method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromINR(500, "DZD")
+      currencyConverter.convertFromINR(150, "BCD")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -584,7 +584,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from USD method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromUSD(500, "DZD")
+      currencyConverter.convertFromUSD(200, "CDE")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -593,7 +593,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from EUR method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromEUR(500, "DZD")
+      currencyConverter.convertFromEUR(250, "DEF")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -602,7 +602,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from JPY method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromJPY(500, "DZD")
+      currencyConverter.convertFromJPY(300, "EFG")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -611,7 +611,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from GBP method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromGBP(500, "DZD")
+      currencyConverter.convertFromGBP(350, "FGH")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -620,7 +620,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from CHF method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromCHF(500, "DZD")
+      currencyConverter.convertFromCHF(400, "GHI")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -629,7 +629,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from CAD method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromCAD(500, "DZD")
+      currencyConverter.convertFromCAD(450, "HIJ")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -638,7 +638,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from ZAR method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromZAR(500, "DZD")
+      currencyConverter.convertFromZAR(500, "IJK")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -647,7 +647,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from AUD method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromAUD(500, "DZD")
+      currencyConverter.convertFromAUD(550, "JKL")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
@@ -656,7 +656,7 @@ class CurrencyConverterSpec extends FlatSpec with BeforeAndAfterAll {
 
   "Currency conversion from KWD method" should "throw Exception when invalid currency type given" in {
     try {
-      currencyConverter.convertFromKWD(500, "DZD")
+      currencyConverter.convertFromKWD(600, "KLM")
     } catch {
       case ex:Exception =>
         assert(ex.getMessage == "Not a valid currency type!")
