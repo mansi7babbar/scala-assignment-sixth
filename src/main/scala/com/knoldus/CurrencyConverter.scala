@@ -1,7 +1,7 @@
 package com.knoldus
 
 /**
- * trait CurrencyConverter allows code to convert amount given in one type of currency to another type of currency.
+ * trait CurrencyConverter allows code to convert amount given in one type of currency to another type of currency
  */
 
 trait CurrencyConverter {
